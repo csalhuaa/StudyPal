@@ -1,4 +1,4 @@
-package com.example.lab03idnp.ui.theme
+package com.example.studypal.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lab03idnp"
+    namespace = "com.example.studypal"
     compileSdk = 36
 
     defaultConfig {

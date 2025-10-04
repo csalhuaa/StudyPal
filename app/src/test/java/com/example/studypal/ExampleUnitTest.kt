@@ -1,4 +1,4 @@
-package com.example.lab03idnp
+package com.example.studypal
 
 import org.junit.Test
 

@@ -1,6 +1,7 @@
-package com.example.lab03idnp.ui.components
+package com.example.studypal.ui.components
 
-import androidx.compose.material3.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 
 @Composable

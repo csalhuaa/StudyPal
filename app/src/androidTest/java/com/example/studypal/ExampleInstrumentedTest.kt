@@ -1,4 +1,4 @@
-package com.example.lab03idnp
+package com.example.studypal
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
