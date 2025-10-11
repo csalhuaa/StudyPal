@@ -11,7 +11,11 @@ import androidx.compose.ui.unit.sp
 import com.example.studypal.ui.components.PrimaryButton
 
 @Composable
-fun TasksScreen(onNavigate: () -> Unit) {
+fun TasksScreen(
+    onNavigateToAddTask: () -> Unit,
+    onNavigateToSettings: () -> Unit,
+    onBack: () -> Unit
+) {
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
@@ -21,13 +25,23 @@ fun TasksScreen(onNavigate: () -> Unit) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Aquí podrás ver tus tareas asignadas 📝",
+                text = "Mis tareas 📝",
                 style = MaterialTheme.typography.headlineMedium,
                 textAlign = TextAlign.Center,
                 lineHeight = 30.sp
             )
             Spacer(modifier = Modifier.height(24.dp))
-            PrimaryButton(text = "Ir a ajustes", onClick = onNavigate)
+            Text(
+                text = "Aquí podrás visualizar tus tareas y agregar nuevas cuando lo necesites.",
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.bodyLarge
+            )
+            Spacer(modifier = Modifier.height(24.dp))
+            PrimaryButton(text = "Agregar nueva tarea", onClick = onNavigateToAddTask)
+            Spacer(modifier = Modifier.height(12.dp))
+            Button(onClick = onNavigateToSettings) {
+                Text("Ir a configuración")
+            }
         }
     }
 }
