@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.sp
 import com.example.studypal.ui.components.PrimaryButton
 
 @Composable
-fun HomeScreen(onNavigate: () -> Unit) {
+fun HomeScreen(onNavigate: (String) -> Unit) {
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
@@ -27,7 +27,12 @@ fun HomeScreen(onNavigate: () -> Unit) {
                 lineHeight = 30.sp
             )
             Spacer(modifier = Modifier.height(24.dp))
-            PrimaryButton(text = "Ir a tareas", onClick = onNavigate)
+            PrimaryButton(text = "Ir a tareas", onClick = {onNavigate("tasks")})
+
+            Spacer(modifier = Modifier.height(24.dp))
+            Button(onClick = { onNavigate("circle") }) {
+                Text("Animación del Círculo")
+            }
         }
     }
 }

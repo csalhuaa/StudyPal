@@ -9,6 +9,7 @@ import com.example.studypal.ui.screens.AddTaskScreen
 import com.example.studypal.ui.screens.HomeScreen
 import com.example.studypal.ui.screens.SettingsScreen
 import com.example.studypal.ui.screens.TasksScreen
+import com.example.studypal.ui.screens.CircleAnimationScreen
 
 object Routes {
     const val HOME = "home"
@@ -24,7 +25,7 @@ fun AppNavHost(navController: NavHostController = rememberNavController()) {
         startDestination = Routes.HOME
     ) {
         composable(Routes.HOME) {
-            HomeScreen(onNavigate = { navController.navigate(Routes.TASKS) })
+            HomeScreen(onNavigate = { route -> navController.navigate(route) })
         }
 
         composable(Routes.TASKS) {
@@ -41,6 +42,10 @@ fun AppNavHost(navController: NavHostController = rememberNavController()) {
 
         composable(Routes.SETTINGS) {
             SettingsScreen(onNavigate = { navController.navigate(Routes.HOME) })
+        }
+
+        composable("circle") {
+            CircleAnimationScreen(onBackToHome = { navController.navigate(Routes.HOME) })
         }
     }
 }
